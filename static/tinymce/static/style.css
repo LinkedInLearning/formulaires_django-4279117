@@ -1,0 +1,13 @@
+.detail-header {
+  background-size: cover;
+  background-position: center;
+}
+
+.detail-header-text {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+}
+
+.form-inline>div {
+  display: inline
+}
