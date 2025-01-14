@@ -1,7 +1,13 @@
 {% extends "appbase.html" %}
 {% load static %}
 
-{% block title %} - Proposer une recette{% endblock %}
+{% block title %} - 
+  {% if recipe == None %}
+  Proposer une recette
+  {% else %}
+  {{ recipe.title }}
+  {% endif %}
+{% endblock %}
 
 {% block content %}
 
