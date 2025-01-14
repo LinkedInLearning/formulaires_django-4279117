@@ -8,8 +8,9 @@
   <ul class="nav nav-pills">
     {% for sort in sorts %}
     <li class="nav-item">
-      <a class="nav-link{% if sort_id == forloop.counter0 %} active{% endif %}" 
-        href="?sort={{ forloop.counter0 }}">{{ sort }}</a>
+      <a class="nav-link{% if sort_id == forloop.counter0 %} active{% endif %}" href="?sort={{ forloop.counter0 }}">
+        {{ sort }}
+      </a>
     </li>
     {% endfor %}
   </ul>
