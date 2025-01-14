@@ -5,7 +5,14 @@
 
 {% block content %}
 <section class="row py-3 text-center container">
-  <ul class="nav nav-pills">
+  <form class="col-8">
+    <label for="query">Nom ou ingrédient : </label>
+    <input type="text" id="query" name="query">
+    <label><input type="checkbox" name="vegan"> Végane</label>
+    <input type="submit" value="Filtrer">
+    <input type="hidden" name="sort" value="{{ sort_id }}">
+  </form>
+  <ul class="col-4 nav nav-pills">
     {% for sort in sorts %}
     <li class="nav-item">
       <a class="nav-link{% if sort_id == forloop.counter0 %} active{% endif %}" href="?sort={{ forloop.counter0 }}">
