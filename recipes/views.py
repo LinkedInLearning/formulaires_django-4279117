@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
 from .models import Category, Recipe
-from .forms import SearchForm
+from .forms import SearchForm, RecipeForm
 
 
 SORTS = [('Likes', '-likes'), ('Récents', '-published'), ('Alphabétique', 'title')]
@@ -59,6 +59,11 @@ def detail(request, recipe_id):
 
 
 def edit(request):
-    context = get_context(request, { 'ok': False })
+    form = RecipeForm(request.POST or None)
+    ok = request.method == 'POST' and form.is_valid()
+    if ok:
+        form.save()
+        form = RecipeForm()
+    context = get_context(request, { 'ok': ok, 'form': form })
     template = loader.get_template('edit.html')
     return HttpResponse(template.render(context, request))
