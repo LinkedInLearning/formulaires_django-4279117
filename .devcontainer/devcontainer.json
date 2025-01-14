@@ -1,25 +1,35 @@
 {
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "VARIANT": "3"
+    }
+  },
   "customizations": {
-    "codespaces": {
-      "openFiles": [
-        "README.md"
-      ]
-    },
     "vscode": {
-      // Set *default* container specific settings.json values on container create.
       "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"
       },
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "GitHub.github-vscode-theme"
-        // Additional Extensions Here
+        "GitHub.github-vscode-theme",
+        "github.copilot",
+        "ms-ceintl.vscode-language-pack-fr",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
       ]
     }
   },
-  // Update welcome text and set terminal prompt to '$ '
+  "portsAttributes": {
+    "8000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
-  // Pull all branches
-  "postAttachCommand": "git pull --all"
+  "postAttachCommand": "git pull --all",
+  "forwardPorts": [
+    8000
+  ]
 }
 // DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
