@@ -1,5 +1,5 @@
 from django import forms
-from .models import Recipe
+from .models import Recipe, Category
 from tinymce.widgets import TinyMCE
 
 
@@ -12,7 +12,7 @@ class SearchForm(forms.Form):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ['title', 'vegan', 'category', 'quantity', 'description', 'password', 'instructions' ]
+        fields = ['title', 'vegan', 'category', 'quantity', 'description', 'password', 'confirmation', 'instructions' ]
         labels = {
             'title': 'Nom',
             'vegan': 'Végane',
@@ -26,3 +26,11 @@ class RecipeForm(forms.ModelForm):
             'instructions': TinyMCE(attrs={'cols': 80, 'rows': 30}),
             'password': forms.PasswordInput(),
         }
+    confirmation = forms.CharField(
+        label='Confirmer le mot de passe', 
+        widget=forms.PasswordInput()
+    )
+    category = forms.ModelChoiceField(
+        queryset=Category.objects.order_by('order'),
+        widget=forms.RadioSelect()
+    )
