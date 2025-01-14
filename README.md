@@ -28,6 +28,7 @@ La branche master correspond au code à la fin de la formation.
 3. Activez l'environnement virtuel python
 4. Installez les dépendances avec la commande `pip install -r requirements.txt`
 5. Migrez les bases de données avec la commande `python manage.py migrate`
+6. Chargez les données d'exemple avec la commande `python manage.py loaddata sample`
 
 
 ### Formateur

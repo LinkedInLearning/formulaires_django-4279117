@@ -1,0 +1,1275 @@
+- model: recipes.Category
+  pk: 1
+  fields:
+    name: Snacking
+    order: 10
+- model: recipes.Category
+  pk: 2
+  fields:
+    name: Plats
+    order: 20
+- model: recipes.Category
+  pk: 3
+  fields:
+    name: Dessert
+    order: 30
+
+- model: recipes.Recipe
+  pk: 1
+  fields:
+    category: 2
+    image: img/01.jpg
+    likes: 210
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Tofu Tikka Masala
+    quantity: Pour 4 personnes
+    description: >-
+      Le Tofu Tikka Masala est un plat indien savoureux et épicé où des cubes de tofu 
+      marinés dans un mélange d'épices et de yaourt sont cuits au four, puis nappés 
+      d'une sauce tomate crémeuse et parfumée. Servi avec du riz basmati, ce plat est 
+      une option délicieuse et rassasiante pour les amateurs de cuisine indienne.
+    instructions: >-
+      <h3>Préparation du tofu</h3>
+      <ul>
+        <li>Pressez le tofu pour enlever l'excès d'eau et coupez-le en cubes.</li>
+        <li>Dans un bol, mélangez le yaourt, le jus de citron, le gingembre, l'ail, le garam masala, le cumin, le paprika, le curcuma, le piment de Cayenne (si utilisé), le sel et le poivre.</li>
+        <li>Ajoutez les cubes de tofu dans ce mélange et laissez mariner pendant au moins 30 minutes (idéalement 2 heures).</li>
+      </ul>
+      <h3>Cuisson du tofu</h3>
+      <ul>
+        <li>Préchauffez le four à 200°C.</li>
+        <li>Disposez les cubes de tofu marinés sur une plaque de cuisson recouverte de papier sulfurisé.</li>
+        <li>Faites cuire au four pendant 20-25 minutes, jusqu'à ce que le tofu soit doré et légèrement croustillant.</li>
+      </ul>
+      <h3>Préparation de la sauce</h3>
+      <ul>
+        <li>Dans une grande poêle, faites chauffer l'huile végétale à feu moyen.</li>
+        <li>Ajoutez l'oignon haché et faites-le revenir jusqu'à ce qu'il soit translucide.</li>
+        <li>Ajoutez l'ail et le gingembre, et faites cuire encore 1-2 minutes.</li>
+        <li>Ajoutez les tomates concassées, la pâte de tomate, le sucre, et une pincée de sel. Laissez mijoter pendant 10-15 minutes.</li>
+        <li>Ajoutez la crème (ou la crème de coco) et mélangez bien.</li>
+        <li>Ajoutez les cubes de tofu cuits dans la sauce et laissez mijoter encore 5 minutes.</li>
+      </ul>
+      <h3>Présentation</h3>
+      <ul>
+        <li>Servez le Tofu Tikka Masala chaud, garni de coriandre fraîche, accompagné de riz basmati.</li>
+      </ul>
+
+    
+- model: recipes.Recipe
+  pk: 2
+  fields:
+    category: 1
+    image: img/02.jpg
+    likes: 10
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Wrap pois chiches et avocat
+    quantity: Pour 2 personnes
+    description: >-
+      Ce wrap végétarien est une combinaison parfaite de saveurs et de textures. Les pois 
+      chiches écrasés et assaisonnés apportent une base protéinée, tandis que l'avocat, la 
+      tomate, l'oignon rouge et la laitue ajoutent fraîcheur et croquant. Enroulé dans une 
+      tortilla, ce wrap est idéal pour un repas léger et sain.
+    instructions: >-
+      <h3>Préparation des pois chiches</h3>
+      <ul>
+        <li>Dans un bol, écrasez les pois chiches à l'aide d'une fourchette jusqu'à obtenir une texture grossière.</li>
+        <li>Ajoutez le jus de citron, l'huile d'olive, le sel et le poivre. Mélangez bien.</li>
+      </ul>
+      <h3>Préparation des tortillas</h3>
+      <ul>
+        <li>Faites chauffer les tortillas dans une poêle sèche à feu moyen pendant environ 30 secondes de chaque côté, ou jusqu'à ce qu'elles soient légèrement dorées et souples.</li>
+      </ul>
+      <h3>Assemblage des wraps</h3>
+      <ul>
+        <li>Étalez une couche de houmous sur chaque tortilla (facultatif).</li>
+        <li>Répartissez la préparation de pois chiches sur les tortillas.</li>
+        <li>Ajoutez les tranches d'avocat, les dés de tomate, l'oignon rouge émincé et les feuilles de laitue ou d'épinards.</li>
+        <li>Ajoutez quelques feuilles de basilic frais si désiré.</li>
+        <li>Roulez les tortillas bien serrées pour former des wraps.</li>
+      </ul>
+      <h3>Présentation</h3>
+      <ul>
+        <li>Coupez chaque wrap en deux et servez immédiatement.</li>
+      </ul>
+
+
+- model: recipes.Recipe
+  pk: 3
+  fields:
+    category: 2
+    image: img/03.jpg
+    likes: 47
+    vegan: False
+    published: 2025-01-13T15:30:00Z
+    title:  Riz Frit
+    quantity: Pour 4 personnes
+    description: >-
+      Le riz frit est un plat polyvalent et savoureux, parfait pour utiliser les restes de 
+      riz. Mélangé avec des œufs brouillés, des légumes croquants comme la carotte, le poivron 
+      et les petits pois, et assaisonné de sauce soja, ce plat est à la fois nourrissant et 
+      délicieux. Il est souvent garni de tranches de tomate et de coriandre fraîche.
+    instructions: >-
+      <h3>Préparation des œufs</h3>
+      <ul>
+        <li>Battez les œufs dans un bol.</li>
+        <li>Faites chauffer 1 cuillère à soupe d'huile végétale dans une grande poêle ou un wok à feu moyen.</li>
+        <li>Versez les œufs battus et faites-les cuire en les remuant jusqu'à ce qu'ils soient brouillés. Réservez.</li>
+      </ul>
+      <h3>Préparation des légumes</h3>
+      <ul>
+        <li>Dans la même poêle, ajoutez 2 cuillères à soupe d'huile végétale.</li>
+        <li>Ajoutez l'oignon haché et l'ail émincé, et faites-les revenir jusqu'à ce qu'ils soient translucides.</li>
+        <li>Ajoutez la carotte et le poivron, et faites cuire pendant 3-4 minutes jusqu'à ce qu'ils soient tendres.</li>
+        <li>Ajoutez les petits pois et faites cuire encore 2 minutes.</li>
+      </ul>
+      <h3>Cuisson du riz</h3>
+      <ul>
+        <li>Augmentez le feu à moyen-élevé et ajoutez le riz cuit dans la poêle.</li>
+        <li>Mélangez bien pour combiner le riz avec les légumes.</li>
+        <li>Ajoutez la sauce soja (ou sauce tamari) et la sauce d'huître végétarienne (si utilisée). Mélangez bien.</li>
+        <li>Ajoutez les œufs brouillés et les oignons verts hachés. Mélangez bien.</li>
+        <li>Assaisonnez avec du sel et du poivre au goût.</li>
+      </ul>
+      <h3>Présentation</h3>
+      <ul>
+        <li>Servez le riz frit chaud, garni de feuilles de coriandre fraîche et de tranches de tomate.</li>
+      </ul>
+
+- model: recipes.Recipe
+  pk: 4
+  fields:
+    category: 3
+    image: img/04.jpg
+    likes: 28
+    vegan: False
+    published: 2025-01-13T15:30:00Z
+    title: Cheesecake aux myrtilles
+    quantity: Pour 6 à 8 personnes
+    description: >-
+      Ce cheesecake végétarien aux myrtilles est un dessert onctueux et rafraîchissant. 
+      Avec une base croustillante de biscuits et une garniture crémeuse au fromage 
+      frais et aux myrtilles, ce gâteau est parfait pour les occasions spéciales ou 
+      pour satisfaire une envie de sucré. Décoré de myrtilles fraîches, il est à la 
+      fois esthétique et délicieux.
+    instructions: >-
+      <h3>Préparation de la base</h3>
+      <ul>
+        <li>Préchauffez le four à 180°C.</li>
+        <li>Mixez les biscuits jusqu'à obtenir une poudre fine.</li>
+        <li>Ajoutez le beurre fondu et mélangez bien jusqu'à obtenir une texture sableuse.</li>
+        <li>Tassez ce mélange dans le fond d'un moule à charnière de 20 cm de diamètre.</li>
+        <li>Enfournez pendant 10 minutes, puis laissez refroidir.</li>
+      </ul>
+      <h3>Préparation de la garniture</h3>
+      <ul>
+        <li>Dans un grand bol, mélangez le fromage frais et le sucre jusqu'à obtenir une texture lisse.</li>
+        <li>Ajoutez la crème fraîche et l'extrait de vanille, et mélangez bien.</li>
+        <li>Faites tremper les feuilles de gélatine dans de l'eau froide pendant 5 minutes (ou préparez l'agar-agar selon les instructions du paquet).</li>
+        <li>Faites chauffer les 2 cuillères à soupe d'eau et dissolvez-y la gélatine essorée (ou l'agar-agar).</li>
+        <li>Ajoutez ce mélange au fromage frais et mélangez bien.</li>
+        <li>Incorporez délicatement les 200g de myrtilles fraîches.</li>
+      </ul>
+      <h3>Assemblage</h3>
+      <ul>
+        <li>Versez la garniture sur la base refroidie et lissez la surface.</li>
+        <li>Réfrigérez pendant au moins 4 heures, ou jusqu'à ce que le cheesecake soit bien pris.</li>
+      </ul>
+      <h3>Présentation</h3>
+      <ul>
+        <li>Démoulez délicatement le cheesecake.</li>
+        <li>Décorez avec les 200g de myrtilles fraîches restantes.</li>
+        <li>Servez bien frais.</li>
+      </ul>
+
+
+- model: recipes.Recipe
+  pk: 5
+  fields:
+    category: 3
+    image: img/05.jpg
+    likes: 103
+    vegan: False
+    published: 2025-01-13T15:30:00Z
+    title: Pain perdu
+    quantity: Pour 2 à 3 personnes
+    description: >-
+      Le pain perdu végétarien est un délicieux petit-déjeuner ou dessert, composé de 
+      tranches de pain trempées dans un mélange d'œufs, de lait et d'épices, puis 
+      cuites jusqu'à obtenir une texture dorée et croustillante. Garni de fruits frais 
+      et d'une touche de sucre glace, il allie douceur et fraîcheur pour un moment 
+      gourmand.
+    instructions: >-
+      <h3>Préparation de la pâte à pain perdu</h3>
+      <ul>
+        <li>Dans un bol, battez les œufs.</li>
+        <li>Ajoutez le lait, l'extrait de vanille, le sucre, la cannelle et le sel. Mélangez bien jusqu'à obtenir une préparation homogène.</li>
+        <li>Trempez chaque tranche de pain dans ce mélange, en veillant à ce que chaque côté soit bien imbibé.</li>
+      </ul>
+      <h3>Cuisson du pain perdu</h3>
+      <ul>
+        <li>Faites chauffer une poêle à feu moyen et ajoutez un peu de beurre ou d'huile.</li>
+        <li>Placez les tranches de pain imbibées dans la poêle et faites-les cuire environ 2-3 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes.</li>
+      </ul>
+      <h3>Préparation de la garniture</h3>
+      <ul>
+        <li>Pendant que le pain perdu cuit, lavez et coupez les fruits frais.</li>
+        <li>Saupoudrez éventuellement les fruits de sucre glace pour plus de douceur.</li>
+      </ul>
+      <h3>Assemblage</h3>
+      <ul>
+        <li>Disposez les tranches de pain perdu dans une assiette.</li>
+        <li>Ajoutez les fruits frais sur le dessus.</li>
+        <li>Saupoudrez de sucre glace si désiré.</li>
+        <li>Décorez avec quelques feuilles de menthe ou de persil.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez immédiatement pour profiter du pain perdu encore chaud et croustillant.</li>
+      </ul>
+
+- model: recipes.Recipe
+  pk: 6
+  fields:
+    category: 3
+    image: img/06.jpg
+    likes: 45
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Cookies chocolat et noix
+    quantity: Pour environ 12 cookies (4 à 6 personnes)
+    description: >-
+      Ces cookies moelleux et croustillants sont parfaits pour une pause gourmande. Les 
+      pépites de chocolat fondantes et les noix croquantes ajoutent une texture et une 
+      saveur irrésistibles. Parfaits avec un verre de lait ou une tasse de café, ils 
+      raviront petits et grands.
+    instructions: >-
+      <h3>Préparation de la pâte</h3>
+      <ul>
+        <li>Préchauffez votre four à 180°C (thermostat 6).</li>
+        <li>Dans un grand bol, mélangez le beurre ramolli, le sucre blanc et la cassonade jusqu'à obtenir une texture crémeuse.</li>
+        <li>Ajoutez l'œuf et l'extrait de vanille, puis mélangez bien.</li>
+        <li>Dans un autre bol, mélangez la farine, le bicarbonate de soude et le sel.</li>
+        <li>Incorporez progressivement les ingrédients secs au mélange de beurre et de sucre, en mélangeant jusqu'à obtenir une pâte homogène.</li>
+        <li>Ajoutez les pépites de chocolat et les noix hachées (si utilisées), puis mélangez à nouveau.</li>
+      </ul>
+      <h3>Formation des cookies</h3>
+      <ul>
+        <li>Sur une plaque de cuisson recouverte de papier sulfurisé, déposez des boules de pâte de la taille d'une cuillère à soupe, en les espaçant bien car elles vont s'étaler à la cuisson.</li>
+      </ul>
+      <h3>Cuisson</h3>
+      <ul>
+        <li>Enfournez les cookies pendant 10 à 12 minutes, ou jusqu'à ce qu'ils soient dorés sur les bords mais encore légèrement mous au centre.</li>
+        <li>Laissez-les refroidir sur la plaque pendant 2-3 minutes avant de les transférer sur une grille pour qu'ils refroidissent complètement.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez les cookies tièdes ou à température ambiante, accompagnés d'un verre de lait ou d'une tasse de café.</li>
+      </ul>
+
+
+- model: recipes.Recipe
+  pk: 7
+  fields:
+    category: 1
+    image: img/07.jpg
+    likes: 85
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Curry de légumes crémeux
+    quantity: Pour 4 personnes
+    description: >-
+      Ce curry de légumes est un plat réconfortant et savoureux, idéal pour un dîner en 
+      famille ou entre amis. Les légumes tendres baignent dans une sauce onctueuse au lait 
+      de coco et aux épices, offrant un mélange de saveurs exotiques. Servi avec du riz 
+      basmati, il constitue un repas complet et nourrissant.
+    instructions: >-
+      <h3>Préparation des légumes</h3>
+      <ul>
+        <li>Dans une grande poêle ou un wok, faites chauffer l'huile végétale à feu moyen.</li>
+        <li>Ajoutez l'oignon, l'ail, le gingembre et les piments, puis faites revenir pendant 2-3 minutes jusqu'à ce que l'oignon soit translucide.</li>
+      </ul>
+      <h3>Cuisson du curry</h3>
+      <ul>
+        <li>Ajoutez la pâte de curry et faites revenir pendant 1 minute en remuant constamment.</li>
+        <li>Versez le lait de coco et le bouillon de légumes, puis mélangez bien.</li>
+        <li>Ajoutez la patate douce, le chou-fleur, le poivron et la courgette. Portez à ébullition, puis réduisez le feu et laissez mijoter pendant 15-20 minutes, jusqu'à ce que les légumes soient tendres.</li>
+      </ul>
+      <h3>Assaisonnement</h3>
+      <ul>
+        <li>Ajoutez la sauce soja, le sucre de coco, le sel et le poivre. Goûtez et ajustez les assaisonnements si nécessaire.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez le curry chaud, garni de coriandre fraîche, de quelques feuilles d'épinards, et éventuellement de graines de sésame ou de cacahuètes concassées.</li>
+        <li>Accompagnez de riz basmati cuit.</li>
+      </ul>
+
+- model: recipes.Recipe
+  pk: 8
+  fields:
+    category: 2
+    image: img/08.jpg
+    likes: 41
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Haricots verts sautés, tofu croustillant
+    quantity: Pour 2 à 3 personnes
+    description: >-
+      Ce plat allie la fraîcheur des haricots verts croquants au croustillant du tofu doré. 
+      Sautés avec de l'ail et du gingembre, puis nappés d'une sauce savoureuse, les 
+      ingrédients se marient parfaitement pour offrir une explosion de saveurs. Un choix 
+      parfait pour un repas léger et équilibré.
+    instructions: >-
+      <h3>Préparation du tofu</h3>
+      <ul>
+        <li>Pressez le tofu pour enlever l'excès d'eau, puis coupez-le en dés.</li>
+        <li>Dans une poêle, faites chauffer 1 cuillère à soupe d'huile végétale à feu moyen. Ajoutez les dés de tofu et faites-les dorer de tous les côtés jusqu'à ce qu'ils soient croustillants. Réservez.</li>
+      </ul>
+      <h3>Cuisson des haricots verts</h3>
+      <ul>
+        <li>Dans la même poêle, ajoutez le reste de l'huile végétale. Faites revenir l'ail et le gingembre pendant 1 minute jusqu'à ce qu'ils soient parfumés.</li>
+        <li>Ajoutez les haricots verts et faites-les sauter pendant 3-4 minutes jusqu'à ce qu'ils soient tendres mais encore croquants.</li>
+      </ul>
+      <h3>Préparation de la sauce</h3>
+      <ul>
+        <li>Dans un petit bol, mélangez la sauce soja, la sauce hoisin (si utilisée), le sucre, le piment rouge (si utilisé), l'eau et la fécule de maïs.</li>
+      </ul>
+      <h3>Assemblage</h3>
+      <ul>
+        <li>Versez la sauce dans la poêle avec les haricots verts et mélangez bien.</li>
+        <li>Ajoutez le tofu croustillant et mélangez délicatement pour bien enrober tous les ingrédients de sauce.</li>
+        <li>Laissez cuire encore 1-2 minutes jusqu'à ce que la sauce épaississe.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez chaud, garni de coriandre fraîche et de graines de sésame (si utilisées).</li>
+      </ul>
+
+- model: recipes.Recipe
+  pk: 9
+  fields:
+    category: 1
+    image: img/09.jpg
+    likes: 65
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Samosas Végétariens
+    quantity: Pour 4 à 6 personnes
+    description: >-
+      Les samosas végétariens sont des beignets triangulaires originaires d'Asie du Sud, 
+      farcis d'un mélange savoureux de pommes de terre, petits pois, oignons et épices. 
+      La pâte est croustillante à l'extérieur et moelleuse à l'intérieur, offrant une 
+      explosion de saveurs à chaque bouchée. Parfaits en tant qu'entrée ou en-cas, ils 
+      sont souvent servis avec une sauce à la menthe ou au tamarin.
+    instructions: >-
+      <h3>Préparation de la pâte</h3>
+      <ul>
+        <li>Dans un bol, mélangez la farine et le sel.</li>
+        <li>Ajoutez l'huile végétale et mélangez jusqu'à obtenir une texture sableuse.</li>
+        <li>Ajoutez progressivement l'eau tiède et pétrissez jusqu'à obtenir une pâte lisse et homogène.</li>
+        <li>Couvrez le bol avec un linge humide et laissez reposer la pâte pendant 30 minutes.</li>
+      </ul>
+      <h3>Préparation de la garniture</h3>
+      <ul>
+        <li>Faites cuire les pommes de terre à l'eau bouillante jusqu'à ce qu'elles soient tendres. Égouttez-les et écrasez-les.</li>
+        <li>Dans une poêle, faites chauffer 2 cuillères à soupe d'huile. Ajoutez les graines de cumin et faites-les griller pendant quelques secondes.</li>
+        <li>Ajoutez l'oignon finement haché et faites-le revenir jusqu'à ce qu'il soit translucide.</li>
+        <li>Ajoutez les petits pois, la coriandre en poudre, le curcuma, le piment en poudre (si utilisé), le sel et le poivre. Mélangez bien et faites cuire pendant 2-3 minutes.</li>
+        <li>Ajoutez les pommes de terre écrasées et mélangez bien. Faites cuire pendant encore 2-3 minutes. Laissez refroidir.</li>
+      </ul>
+      <h3>Assemblage des samosas</h3>
+      <ul>
+        <li>Divisez la pâte en petites boules et étalez chaque boule en un cercle fin.</li>
+        <li>Coupez chaque cercle en deux pour obtenir des demi-cercles.</li>
+        <li>Prenez un demi-cercle, humidifiez les bords avec un peu d'eau et formez un cône.</li>
+        <li>Remplissez le cône avec une cuillère à soupe de garniture.</li>
+        <li>Scellez les bords en les pressant bien pour former un triangle.</li>
+        <li>Répétez l'opération avec le reste de la pâte et de la garniture.</li>
+      </ul>
+      <h3>Cuisson</h3>
+      <ul>
+        <li>Faites chauffer de l'huile dans une friteuse ou une poêle profonde à feu moyen.</li>
+        <li>Faites frire les samosas par petites quantités jusqu'à ce qu'ils soient dorés et croustillants.</li>
+        <li>Égouttez-les sur du papier absorbant pour enlever l'excès d'huile.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez les samosas chauds avec une sauce à la menthe ou au tamarin.</li>
+      </ul>
+
+
+- model: recipes.Recipe
+  pk: 10
+  fields:
+    category: 2
+    image: img/10.jpg
+    likes: 29
+    vegan: False
+    published: 2025-01-13T15:30:00Z
+    title: Pizza Végétarienne
+    quantity: Pour 2 à 3 personnes
+    description: >-
+      La pizza végétarienne est un plat classique italien composé d'une pâte à pizza 
+      croustillante, garnie de sauce tomate, de mozzarella fondue, de champignons, 
+      d'olives noires, de tomates cerises et de basilic frais. C'est un plat principal 
+      savoureux et polyvalent, idéal pour un repas convivial en famille ou entre amis.
+    instructions: >-
+      <h3>Préparation de la pâte</h3>
+      <ul>
+        <li>Dans un grand bol, mélangez la farine, la levure et le sel.</li>
+        <li>Ajoutez l'huile d'olive et l'eau tiède, puis mélangez jusqu'à obtenir une pâte homogène.</li>
+        <li>Pétrissez la pâte sur une surface farinée pendant environ 5 minutes, jusqu'à ce qu'elle soit lisse et élastique.</li>
+        <li>Placez la pâte dans un bol légèrement huilé, couvrez avec un linge propre et laissez lever dans un endroit chaud pendant environ 1 heure, jusqu'à ce qu'elle double de volume.</li>
+      </ul>
+      <h3>Préparation de la garniture</h3>
+      <ul>
+        <li>Pendant que la pâte lève, préparez les ingrédients de la garniture.</li>
+        <li>Nettoyez et tranchez les champignons.</li>
+        <li>Coupez les olives noires en rondelles.</li>
+        <li>Coupez les tomates cerises en deux.</li>
+        <li>Égouttez la mozzarella et coupez-la en tranches.</li>
+      </ul>
+      <h3>Assemblage de la pizza</h3>
+      <ul>
+        <li>Préchauffez votre four à 220°C (425°F) avec une plaque de cuisson ou une pierre à pizza à l'intérieur.</li>
+        <li>Une fois la pâte levée, dégazez-la et étalez-la sur une surface farinée pour obtenir un cercle d'environ 30 cm de diamètre.</li>
+        <li>Transférez la pâte sur une feuille de papier sulfurisé.</li>
+        <li>Étalez la sauce tomate uniformément sur la pâte, en laissant un bord pour la croûte.</li>
+        <li>Ajoutez les tranches de mozzarella, les champignons, les olives et les tomates cerises.</li>
+        <li>Saupoudrez d'origan séché, de sel et de poivre.</li>
+      </ul>
+      <h3>Cuisson</h3>
+      <ul>
+        <li>Transférez la pizza avec le papier sulfurisé sur la plaque de cuisson ou la pierre à pizza préchauffée.</li>
+        <li>Faites cuire au four pendant 12 à 15 minutes, jusqu'à ce que la croûte soit dorée et que le fromage soit fondu et légèrement gratiné.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Sortez la pizza du four et laissez-la reposer quelques minutes avant de la couper.</li>
+        <li>Garnissez de feuilles de basilic frais avant de servir.</li>
+      </ul>
+
+
+- model: recipes.Recipe
+  pk: 11
+  fields:
+    category: 1
+    image: img/11.jpg
+    likes: 33
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Chips Maison
+    quantity: Pour 4 à 6 personnes
+    description: >-
+      Les chips de pommes de terre maison sont des tranches fines de pommes de terre 
+      frites jusqu'à obtenir une texture croustillante. Elles sont généralement 
+      assaisonnées de sel et peuvent être agrémentées de poivre, d'herbes de Provence 
+      ou de paprika. Parfaites en tant qu'en-cas ou accompagnement, elles sont appréciées 
+      pour leur goût authentique et leur croquant irrésistible.
+    instructions: >- 
+      <h3>Préparation des pommes de terre</h3>
+      <ul>
+        <li>Lavez soigneusement les pommes de terre pour enlever toute la saleté. Vous pouvez les éplucher si vous préférez, mais ce n'est pas nécessaire.</li>
+        <li>Coupez les pommes de terre en fines tranches à l'aide d'une mandoline ou d'un couteau bien aiguisé. L'idéal est d'obtenir des tranches d'environ 2-3 mm d'épaisseur.</li>
+        <li>Placez les tranches de pommes de terre dans un grand bol d'eau froide pendant environ 30 minutes pour enlever l'excès d'amidon. Cela aidera à obtenir des chips plus croustillantes.</li>
+        <li>Égouttez les tranches de pommes de terre et séchez-les soigneusement avec un torchon propre ou du papier absorbant. Il est important qu'elles soient bien sèches pour éviter les éclaboussures d'huile pendant la friture.</li>
+      </ul>
+      <h3>Friture des chips</h3>
+      <ul>
+        <li>Faites chauffer l'huile végétale dans une grande casserole ou une friteuse à environ 180°C (350°F). Si vous utilisez une casserole, l'huile doit atteindre une profondeur d'environ 5 cm.</li>
+        <li>Faites frire les tranches de pommes de terre en petites quantités pour éviter de surcharger la casserole. Faites-les frire pendant environ 3 à 5 minutes, ou jusqu'à ce qu'elles soient dorées et croustillantes. Remuez-les de temps en temps pour assurer une cuisson uniforme.</li>
+        <li>À l'aide d'une écumoire, retirez les chips de l'huile et égouttez-les sur du papier absorbant pour enlever l'excès d'huile.</li>
+      </ul>
+      <h3>Assaisonnement</h3>
+      <ul>
+        <li>Saupoudrez immédiatement les chips de sel fin. Vous pouvez également ajouter du poivre, des herbes de Provence ou du paprika selon vos goûts.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez les chips chaudes pour profiter de leur croustillant. Elles peuvent être accompagnées de diverses sauces comme du ketchup, de la mayonnaise, ou une sauce à l'oignon.</li>
+      </ul>
+
+- model: recipes.Recipe
+  pk: 12
+  fields:
+    category: 1
+    image: img/12.jpg
+    likes: 75
+    vegan: True
+    published: 2025-01-13T15:30:00Z
+    title: Onion Rings
+    quantity: Pour 4 à 6 personnes
+    description: >-
+      Les onion rings sont des rondelles d'oignon enrobées d'une panure croustillante 
+      et frites jusqu'à obtenir une texture dorée et croquante. L'intérieur reste tendre 
+      et légèrement sucré, offrant un contraste délicieux avec l'extérieur croustillant. 
+      Servis chauds avec une sauce d'accompagnement, ils sont un en-cas ou un 
+      accompagnement populaire et savoureux.
+    instructions: >-
+      <h3>Préparation des oignons</h3>
+      <ul>
+        <li>Épluchez les oignons et coupez-les en tranches épaisses (environ 1 cm). Séparez les tranches en rondelles.</li>
+      </ul>
+      <h3>Préparation de la pâte</h3>
+      <ul>
+        <li>Dans un bol, mélangez la farine, le sel, le paprika (si utilisé) et le poivre noir.</li>
+        <li>Dans un autre bol, battez l'œuf avec le lait.</li>
+        <li>Placez la chapelure dans un troisième bol.</li>
+      </ul>
+      <h3>Panure des rondelles d'oignon</h3>
+      <ul>
+        <li>Passez chaque rondelle d'oignon dans le mélange de farine, en veillant à bien les enrober.</li>
+        <li>Trempez ensuite les rondelles dans le mélange œuf-lait.</li>
+        <li>Enfin, passez-les dans la chapelure, en appuyant légèrement pour bien les enrober.</li>
+      </ul>
+      <h3>Friture des onion rings</h3>
+      <ul>
+        <li>Faites chauffer l'huile végétale dans une grande casserole ou une friteuse à environ 180°C (350°F). L'huile doit atteindre une profondeur d'environ 5 cm.</li>
+        <li>Faites frire les rondelles d'oignon en petites quantités pour éviter de surcharger la casserole. Faites-les frire pendant environ 2 à 3 minutes de chaque côté, ou jusqu'à ce qu'elles soient dorées et croustillantes.</li>
+        <li>À l'aide d'une écumoire, retirez les onion rings de l'huile et égouttez-les sur du papier absorbant pour enlever l'excès d'huile.</li>
+      </ul>
+      <h3>Service</h3>
+      <ul>
+        <li>Servez les onion rings chauds avec une sauce de votre choix, comme du ketchup, de la mayonnaise, ou une sauce barbecue.</li>
+      </ul>
+
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "400g de tofu ferme"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "200ml de yaourt nature"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à soupe de jus de citron"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café de gingembre râpé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café d'ail émincé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café de garam masala"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café de cumin en poudre"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café de paprika"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1/2 cuillère à café de curcuma"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1/2 cuillère à café de piment de Cayenne"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "Sel et poivre au goût"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "2 cuillères à soupe d'huile végétale"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 oignon, finement haché"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "2 gousses d'ail, émincées"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à soupe de gingembre râpé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 boîte de tomates concassées (400g)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à soupe de pâte de tomate"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "1 cuillère à café de sucre"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "100ml de crème"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "Coriandre fraîche pour la garniture"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 1
+    name: "Riz basmati pour l'accompagnement"
+    optional: false
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "2 grandes tortillas de blé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1 boîte de pois chiches (400g), égouttés et rincés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1 avocat mûr, coupé en tranches"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1 tomate, coupée en dés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1/2 oignon rouge, finement émincé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "2 tasses de laitue ou de jeunes pousses d'épinards"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "2 cuillères à soupe de houmous"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1 cuillère à soupe de jus de citron"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "1 cuillère à soupe d'huile d'olive"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "Sel et poivre au goût"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 2
+    name: "Quelques feuilles de basilic frais"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "3 tasses de riz cuit"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "2 œufs"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "1 carotte, coupée en petits dés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "1 poivron, coupé en petits dés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "1 oignon, finement haché"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "2 gousses d'ail, émincées"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "1 tasse de petits pois"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "3 cuillères à soupe d'huile végétale"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "3 cuillères à soupe de sauce soja"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "1 cuillère à soupe de sauce d'huître végétarienne"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "2 cuillères à soupe d'oignons verts, hachés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "Sel et poivre au goût"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "Quelques feuilles de coriandre fraîche pour la garniture"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 3
+    name: "Tranches de tomate pour la garniture"
+    optional: false
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "200g de biscuits digestifs ou de biscuits secs végétariens"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "100g de beurre, fondu"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "500g de fromage frais type cream cheese"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "100g de sucre en poudre"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "200ml de crème fraîche"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "1 cuillère à café d'extrait de vanille"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "400g de myrtilles fraîches"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "2 feuilles de gélatine"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 4
+    name: "2 cuillères à soupe d'eau"
+    optional: false
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "4 tranches de pain (de préférence légèrement rassis)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "2 œufs"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "120 ml de lait (vous pouvez utiliser du lait végétal comme du lait d'amande ou de soja)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "1 cuillère à café d'extrait de vanille"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "1 cuillère à soupe de sucre"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "1 pincée de cannelle"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "1 pincée de sel"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "Beurre ou huile pour la cuisson"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "Fruits frais (fraises, myrtilles, framboises, etc.)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "Sucre glace"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 5
+    name: "Feuilles de menthe ou de persil pour la décoration"
+    optional: false
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "125 g de beurre ramolli"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "100 g de sucre blanc"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "100 g de cassonade (sucre roux)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "1 œuf"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "1 cuillère à café d'extrait de vanille"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "220 g de farine"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "1/2 cuillère à café de bicarbonate de soude"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "1/2 cuillère à café de sel"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "150 g de pépites de chocolat (noir ou au lait, selon votre préférence)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 6
+    name: "50 g de noix hachées"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 oignon, finement haché"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "2 gousses d'ail, émincées"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 morceau de gingembre frais (environ 2 cm), râpé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 à 2 piments rouges, épépinés et finement hachés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "2 cuillères à soupe d'huile végétale"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "2 cuillères à soupe de pâte de curry rouge (ou jaune, selon votre préférence)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 boîte de lait de coco (400 ml)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "200 ml de bouillon de légumes"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 patate douce, pelée et coupée en cubes"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1/2 chou-fleur, coupé en fleurettes"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 poivron rouge, coupé en morceaux"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 courgette, coupée en demi-rondelles"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "2 cuillères à soupe de sauce soja (ou tamari pour une version sans gluten)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "1 cuillère à soupe de sucre de coco (ou sucre brun)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "Sel et poivre, au goût"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "Coriandre fraîche, pour la garniture"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "Riz basmati cuit, pour servir"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "Quelques feuilles d'épinards frais, pour la garniture"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 7
+    name: "Graines de sésame ou cacahuètes concassées, pour la garniture"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "200 g de tofu ferme, pressé et coupé en dés"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "200 g de haricots verts, parés et coupés en morceaux"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "2 cuillères à soupe d'huile végétale"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "2 gousses d'ail, émincées"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "1 cuillère à soupe de gingembre frais, râpé"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "2 cuillères à soupe de sauce soja (ou tamari pour une version sans gluten)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "1 cuillère à soupe de sauce hoisin"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "1 cuillère à café de sucre"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "1 piment rouge, épépiné et finement haché"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "2 cuillères à soupe d'eau"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "1 cuillère à soupe de fécule de maïs"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "Coriandre fraîche, pour la garniture"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 8
+    name: "Graines de sésame, pour la garniture"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "200g de farine"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1 cuillère à café de sel"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "2 cuillères à soupe d'huile végétale"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "100 ml d'eau tiède"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "2 pommes de terre moyennes"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "100g de petits pois"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1 oignon moyen"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1 cuillère à café de graines de cumin"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1 cuillère à café de coriandre en poudre"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1/2 cuillère à café de curcuma"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 9
+    name: "1/2 cuillère à café de piment en poudre"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "250g de farine"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "1 sachet de levure instantanée (7g)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "1 cuillère à café de sel"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "1 cuillère à soupe d'huile d'olive"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "150 ml d'eau tiède"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "100g de sauce tomate"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "1 boule de mozzarella (125g)"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "100g de champignons"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "10 olives noires"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "10 tomates cerises"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "Quelques feuilles de basilic frais"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 10
+    name: "1 cuillère à soupe d'origan séché"
+    optional: false
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 11 
+    name: "4 grosses pommes de terre"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 11
+    name: "Huile végétale pour la friture"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 11
+    name: "Sel fin"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 11
+    name: "Poivre"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 11
+    name: "Herbes de Provence"
+    optional: true
+
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "2 gros oignons"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "120g de farine"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "1 cuillère à café de sel"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "1/2 cuillère à café de paprika"
+    optional: true
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "1/2 cuillère à café de poivre noir"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "120 ml de lait"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "1 œuf"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "120g de chapelure"
+    optional: false
+- model: recipes.Ingredient
+  fields:
+    recipe: 12
+    name: "Huile végétale pour la friture"
+    optional: false

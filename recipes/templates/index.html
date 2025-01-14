@@ -1,0 +1,38 @@
+{% extends "appbase.html" %}
+{% load static %}
+
+{% block title %} - Recettes{% endblock %}
+
+{% block content %}
+<section class="row py-3 text-center container">
+  <ul class="nav nav-pills">
+    {% for sort in sorts %}
+    <li class="nav-item">
+      <a class="nav-link{% if sort_id == forloop.counter0 %} active{% endif %}" 
+        href="?sort={{ forloop.counter0 }}">{{ sort }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+  {% for recipe in recipes %}
+  <div class="col">
+    <div class="card shadow-sm">
+      <img src="{{ recipe.image.url }}" class="card-img-top" width="100%" alt="Photo de {{ recipe.title|escape }}"
+        focusable="false">
+      <div class="card-body">
+        <h3 class="card-title">{{ recipe.title }}</h3>
+        <p class="card-text">{{ recipe.description }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href="{% url 'detail' recipe.id %}" class="btn btn-sm btn-outline-secondary">Voir</a>
+            <a href="?like={{ recipe.pk }}" class="btn btn-sm btn-outline-secondary">+1 j'aime</a>
+          </div>
+          <small class="text-body-secondary">{{ recipe.likes }} j'aime</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

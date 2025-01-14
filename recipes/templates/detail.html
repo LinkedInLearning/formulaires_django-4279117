@@ -1,0 +1,30 @@
+{% extends "appbase.html" %}
+{% load static %}
+
+{% block title %} - {{ recipe.title }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-12 detail-header" style="background-image: url('{{ recipe.image.url }}');">
+    <div class='col-10 col-lg-7 offset-1 p-5 py-4 my-5 detail-header-text'>
+      <h1>{{ recipe.title }}</h1>
+      <p class="lead">{{ recipe.description }}</p>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 mt-2">
+    <h2>Ingredients</h2>
+    <ul>
+      {% for ingredient in recipe.ingredient_set.all %}
+      <li>{{ ingredient.name }}{% if ingredient.optional %} (facultatif){% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-12 col-md-8 mt-2">
+    <a href="?like={{ recipe.pk }}" class="btn btn-secondary float-end">J'aime
+      <span class="badge text-bg-primary">{{ recipe.likes }}</span>
+    </a>
+    {% autoescape off %}{{ recipe.instructions }}{% endautoescape %}
+  </div>
+</div>
+{% endblock %}

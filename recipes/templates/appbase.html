@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% for category in categories %}
+<li class="nav-item">
+  <a class="nav-link{% if category_id == category.pk %} active{% endif %}" aria-current="page"
+    href="{% url 'category' category.pk %}">{{ category.name }}</a>
+</li>
+{% endfor %}
+{% endblock %}
