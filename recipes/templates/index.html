@@ -5,22 +5,23 @@
 
 {% block content %}
 <section class="row py-3 text-center container">
-  <form class="col-8">
+  <form class="col-8" method="post">
+    {% csrf_token %}
     <label for="query">Nom ou ingrédient : </label>
     <input type="text" id="query" name="query">
     <label><input type="checkbox" name="vegan"> Végane</label>
     <input type="submit" value="Filtrer">
     <input type="hidden" name="sort" value="{{ sort_id }}">
   </form>
-  <ul class="col-4 nav nav-pills">
-    {% for sort in sorts %}
-    <li class="nav-item">
-      <a class="nav-link{% if sort_id == forloop.counter0 %} active{% endif %}" href="?sort={{ forloop.counter0 }}">
-        {{ sort }}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <form class="col-4">
+    <select name="sort" onchange="this.form.submit()">
+      {% for sort in sorts %}
+      <option {% if sort_id == forloop.counter0 %}selected{% endif %} value="{{ forloop.counter0 }}">
+          {{ sort }}
+      </option>
+      {% endfor %}
+    </select>
+  </form>
 </section>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
   {% for recipe in recipes %}
