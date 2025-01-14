@@ -20,12 +20,6 @@
       ]
     }
   },
-  "portsAttributes": {
-    "8000": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
-    }
-  },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
   "postAttachCommand": "git pull --all",
   "forwardPorts": [
