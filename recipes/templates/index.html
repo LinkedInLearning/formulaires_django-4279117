@@ -5,8 +5,7 @@
 
 {% block content %}
 <section class="row py-3 text-center container">
-  <form class="col-8" method="post">
-    {% csrf_token %}
+  <form class="col-8">
     <label for="query">Nom ou ingrédient : </label>
     <input type="text" id="query" name="query">
     <label><input type="checkbox" name="vegan"> Végane</label>
@@ -17,7 +16,7 @@
     <select name="sort" onchange="this.form.submit()">
       {% for sort in sorts %}
       <option {% if sort_id == forloop.counter0 %}selected{% endif %} value="{{ forloop.counter0 }}">
-          {{ sort }}
+        {{ sort }}
       </option>
       {% endfor %}
     </select>
