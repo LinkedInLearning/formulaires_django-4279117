@@ -1,10 +1,18 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.db.models import Q
 from .models import Category, Recipe
 from .forms import SearchForm
 
 
 SORTS = [('Likes', '-likes'), ('Récents', '-published'), ('Alphabétique', 'title')]
+
+
+def filter(recipes, keyword, vegan_only):
+    filter = Q(title__icontains=keyword) | Q(ingredient__name__icontains=keyword)
+    if vegan_only:
+        filter &= Q(vegan=True)
+    return recipes.filter(filter).distinct()
 
 
 def get_context(request, context):
