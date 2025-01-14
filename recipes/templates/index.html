@@ -5,12 +5,9 @@
 
 {% block content %}
 <section class="row py-3 text-center container">
-  <form class="col-8">
-    <label for="query">Nom ou ingrédient : </label>
-    <input type="text" id="query" name="query">
-    <label><input type="checkbox" name="vegan"> Végane</label>
+  <form class="col-8 form-inline">
+    {{ search }}
     <input type="submit" value="Filtrer">
-    <input type="hidden" name="sort" value="{{ sort_id }}">
   </form>
   <form class="col-4">
     <select name="sort" onchange="this.form.submit()">

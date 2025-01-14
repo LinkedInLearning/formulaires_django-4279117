@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from .models import Category, Recipe
+from .forms import SearchForm
 
 
 SORTS = [('Likes', '-likes'), ('Récents', '-published'), ('Alphabétique', 'title')]
@@ -26,6 +27,7 @@ def index(request, category_id=None):
         'sort_id'    : sort_id,
         'recipes'    : recipes.order_by(SORTS[sort_id][1]),
         'category_id': category_id,
+        'search'     : SearchForm(request.GET.dict()|{'sort': sort_id}),
     })
     template = loader.get_template('index.html')
     return HttpResponse(template.render(context, request))
