@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "recipes",
+    "tinymce"
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+TINYMCE_JS_URL = 'tinymce/tinymce.min.js'

@@ -1,5 +1,6 @@
 from django import forms
 from .models import Recipe
+from tinymce.widgets import TinyMCE
 
 
 class SearchForm(forms.Form):
@@ -19,4 +20,7 @@ class RecipeForm(forms.ModelForm):
             'quantity': 'Quantité',
             'description': 'Description',
             'instructions': 'Instructions',
+        },
+        widgets = {
+            'instructions': TinyMCE(attrs={'cols': 80, 'rows': 30}),
         }

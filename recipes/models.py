@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce import models as tinymce_models
 
 
 class Category(models.Model):
@@ -14,7 +15,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     quantity = models.CharField(max_length=50)
-    instructions = models.TextField()
+    instructions = tinymce_models.HTMLField()
     image = models.ImageField(default="img/default.png")
     likes = models.IntegerField(default=0)
     vegan = models.BooleanField(default=False)
