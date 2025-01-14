@@ -30,12 +30,19 @@ def get_context(request, context):
 def index(request, category_id=None):
     sort_id = int(request.GET.get('sort', 0))
     recipes = Recipe.objects.filter(category=category_id) if category_id else Recipe.objects.all()
+    search = SearchForm(request.GET.dict()|{'sort': sort_id})
+    if(search.is_valid()):
+        recipes = filter(
+            recipes, 
+            search.cleaned_data['query'], 
+            search.cleaned_data['vegan']
+        )
     context = get_context(request, {
         'sorts'      : [sort[0] for sort in SORTS],
         'sort_id'    : sort_id,
         'recipes'    : recipes.order_by(SORTS[sort_id][1]),
         'category_id': category_id,
-        'search'     : SearchForm(request.GET.dict()|{'sort': sort_id}),
+        'search'     : search,
     })
     template = loader.get_template('index.html')
     return HttpResponse(template.render(context, request))
