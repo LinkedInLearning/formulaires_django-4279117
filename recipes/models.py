@@ -16,7 +16,7 @@ class Recipe(models.Model):
     description = models.TextField()
     quantity = models.CharField(max_length=50)
     instructions = tinymce_models.HTMLField()
-    image = models.ImageField(default="img/default.png")
+    image = models.ImageField(default="img/default.png", upload_to="img/")
     likes = models.IntegerField(default=0)
     vegan = models.BooleanField(default=False)
     published = models.DateTimeField(auto_now_add=True)

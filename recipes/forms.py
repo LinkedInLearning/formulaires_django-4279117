@@ -12,17 +12,19 @@ class SearchForm(forms.Form):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ['title', 'vegan', 'category', 'quantity', 'description', 'password', 'confirmation', 'instructions' ]
+        fields = ['title', 'vegan', 'category', 'quantity', 'image', 'description', 'password', 'confirmation', 'instructions' ]
         labels = {
             'title': 'Nom',
             'vegan': 'Végane',
             'category': 'Catégorie',
             'quantity': 'Quantité',
+            'image': 'Image',
             'description': 'Description',
             'password': 'Mot de passe',
             'instructions': 'Instructions',
         },
         widgets = {
+            'image': forms.FileInput(),
             'instructions': TinyMCE(attrs={'cols': 80, 'rows': 30}),
             'password': forms.PasswordInput(),
         }

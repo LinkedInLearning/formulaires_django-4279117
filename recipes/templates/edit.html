@@ -12,7 +12,7 @@
 {% block content %}
 
 {% if ok %}<div class="alert alert-success">Recette enregistrée !</div>{% endif %}
-<form class="col-12 py-3" method="post">
+<form class="col-12 py-3" enctype="multipart/form-data" method="post">
   {% csrf_token %}
   {{ form }}
   <input type="submit" class="btn btn-primary" value="Enregistrer">

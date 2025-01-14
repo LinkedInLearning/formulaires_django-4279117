@@ -60,7 +60,11 @@ def detail(request, recipe_id):
 
 def edit(request, recipe_id=None):
     recipe = Recipe.objects.get(pk=recipe_id) if recipe_id else None
-    form = RecipeForm(request.POST or None, instance=recipe)
+    form = RecipeForm(
+        request.POST or None, 
+        request.FILES or None, 
+        instance=recipe
+    )
     ok = request.method == 'POST' and form.is_valid()
     if ok:
         form.save()
