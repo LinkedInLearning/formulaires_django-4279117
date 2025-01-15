@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "recipes",
-    "tinymce"
+    "tinymce",
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [

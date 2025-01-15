@@ -11,6 +11,8 @@
 
 {% block content %}
 
+{% load widget_tweaks %}
+
 {% if ok %}
   <div class="alert alert-success">Recette enregistrée !</div>
 {% elif ko %}
@@ -44,7 +46,7 @@
         {% endif %}>
         <td>
           {{ form.hidden_fields|join:'' }}
-          {{ form.name }}
+          {% render_field form.name class="form-control" %}
         </td>
         <td>{{ form.optional }}</td>
         <td>{{ form.DELETE }}</td>
@@ -56,12 +58,16 @@
       {% for field in form %}
       <div class="mb-3">
         <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+          {% if field|widget_type in 'radioselect checkboxinput' %}
           {{ field }}
+          {% else %}
+          {% render_field field|add_error_class:'is-invalid' class="form-control" %}
           <div class="invalid-feedback">
             {% for err in field.errors %}
             {{ err }}
             {% endfor %}
           </div>
+          {% endif %}
       </div>
       {% endfor %}
     </div>
