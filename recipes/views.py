@@ -68,7 +68,10 @@ def edit(request, recipe_id=None):
     ok = request.method == 'POST' and form.is_valid()
     if ok:
         form.save()
-        form = RecipeForm()
-    context = get_context(request, { 'ok': ok, 'form': form, 'recipe': recipe })
+    context = get_context(request, { 
+        'ok': ok, 
+        'form': form, 
+        'recipe': recipe,
+    })
     template = loader.get_template('edit.html')
     return HttpResponse(template.render(context, request))

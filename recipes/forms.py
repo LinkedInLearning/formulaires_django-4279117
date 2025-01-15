@@ -1,5 +1,5 @@
 from django import forms
-from .models import Recipe, Category
+from .models import Recipe, Category, Ingredient
 from tinymce.widgets import TinyMCE
 
 
@@ -36,3 +36,13 @@ class RecipeForm(forms.ModelForm):
         queryset=Category.objects.order_by('order'),
         widget=forms.RadioSelect()
     )
+
+
+class IngredientForm(forms.ModelForm):
+    class Meta:
+        model = Ingredient
+        fields = ['name', 'optional']
+        labels = {
+            'name': 'Nom',
+            'optional': 'Facultatif',
+        }

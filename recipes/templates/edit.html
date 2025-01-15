@@ -14,7 +14,14 @@
 {% if ok %}<div class="alert alert-success">Recette enregistrée !</div>{% endif %}
 <form class="col-12 py-3" enctype="multipart/form-data" method="post">
   {% csrf_token %}
-  {{ form }}
+  <div class="row">
+    <div class="col-4">
+      
+    </div>
+    <div class="col-8">
+      {{ form }}
+    </div>
+  </div>
   <input type="submit" class="btn btn-primary" value="Enregistrer">
 </form>
 
