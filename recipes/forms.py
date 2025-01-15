@@ -30,7 +30,8 @@ class RecipeForm(forms.ModelForm):
         }
     confirmation = forms.CharField(
         label='Confirmer le mot de passe', 
-        widget=forms.PasswordInput()
+        widget=forms.PasswordInput(),
+        required=False
     )
     category = forms.ModelChoiceField(
         queryset=Category.objects.order_by('order'),
