@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
-from .models import Category, Recipe
-from .forms import SearchForm, RecipeForm
+from django.forms import modelformset_factory
+from .models import Category, Recipe, Ingredient
+from .forms import SearchForm, RecipeForm, IngredientForm
 
 
 SORTS = [('Likes', '-likes'), ('Récents', '-published'), ('Alphabétique', 'title')]
@@ -65,13 +66,25 @@ def edit(request, recipe_id=None):
         request.FILES or None, 
         instance=recipe
     )
-    ok = request.method == 'POST' and form.is_valid()
+    IngredientFormSet = modelformset_factory(
+        Ingredient, 
+        form=IngredientForm
+    )
+    ingredients = IngredientFormSet(
+        request.POST or None, 
+        queryset=Ingredient.objects.filter(recipe=recipe)
+    )
+    ok = request.method == 'POST' and form.is_valid() and ingredients.is_valid()
     if ok:
         form.save()
+        for ingredient in ingredients:
+            ingredient.instance.recipe = form.instance
+            ingredient.save()
     context = get_context(request, { 
         'ok': ok, 
         'form': form, 
         'recipe': recipe,
+        'ingredients': ingredients,
     })
     template = loader.get_template('edit.html')
     return HttpResponse(template.render(context, request))
