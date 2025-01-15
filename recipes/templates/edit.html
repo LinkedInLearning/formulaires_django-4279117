@@ -53,9 +53,17 @@
       </table>
     </div>
     <div class="col-8">
-      <table>
-      {{ form.as_table }}
-      </table>
+      {% for field in form %}
+      <div class="mb-3">
+        <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+          {{ field }}
+          <div class="invalid-feedback">
+            {% for err in field.errors %}
+            {{ err }}
+            {% endfor %}
+          </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
   <input type="submit" class="btn btn-primary" value="Enregistrer">
