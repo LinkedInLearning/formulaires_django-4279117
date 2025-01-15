@@ -77,6 +77,7 @@ def edit(request, recipe_id=None):
         queryset=Ingredient.objects.filter(recipe=recipe)
     )
     ok = request.method == 'POST' and form.is_valid() and ingredients.is_valid()
+    
     if ok:
         form.save()
         for ingredient in ingredients:
