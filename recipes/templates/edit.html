@@ -29,10 +29,28 @@
   {% csrf_token %}
   <div class="row">
     <div class="col-4">
+      <table class="ingredients table table-hover">
+        <tr>
+          <th>Ingredient</th>
+          <th>Option</th>
+          <th>Suppr.</th>
+        </tr>
       {{ ingredients.management_form }}
       {% for form in ingredients %}
-        {{ form }}
+      <tr {% if form.errors %}
+          class="table-danger"
+        {% elif form.is_valid and form.has_changed %}
+          class="table-success"
+        {% endif %}>
+        <td>
+          {{ form.hidden_fields|join:'' }}
+          {{ form.name }}
+        </td>
+        <td>{{ form.optional }}</td>
+        <td>{{ form.DELETE }}</td>
+      </tr>
       {% endfor %}
+      </table>
     </div>
     <div class="col-8">
       <table>
