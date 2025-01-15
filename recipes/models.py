@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import RegexValidator
 from tinymce import models as tinymce_models
 
 
@@ -20,7 +21,15 @@ class Recipe(models.Model):
     likes = models.IntegerField(default=0)
     vegan = models.BooleanField(default=False)
     published = models.DateTimeField(auto_now_add=True)
-    password = models.CharField(max_length=200, null=True, blank=True)
+    password = models.CharField(
+        max_length=200, 
+        null=True, 
+        blank=True, 
+        validators=[RegexValidator(
+            regex='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$',
+            message='Le mot de passe doit contenir au moins 8 caractères, dont au moins un chiffre, une minuscule et une majuscule'
+        )]
+    )
     
     def __str__(self):
         return f"{self.category.name} / {self.title}"

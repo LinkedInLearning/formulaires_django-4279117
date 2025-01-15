@@ -38,6 +38,13 @@ class RecipeForm(forms.ModelForm):
         widget=forms.RadioSelect()
     )
 
+    def clean_confirmation(self):
+        password     = self.cleaned_data.get('password')
+        confirmation = self.cleaned_data.get('confirmation')
+        if password != confirmation:
+            raise forms.ValidationError('Les mots de passe ne correspondent pas')
+        return confirmation
+
 
 class IngredientForm(forms.ModelForm):
     class Meta:
