@@ -11,3 +11,15 @@
 .form-inline>div {
   display: inline
 }
+
+table.ingredients {
+  width: 100%;
+}
+
+table.ingredients input {
+  width: 100%;
+}
+
+table.ingredients td {
+  text-align: center;
+}
