@@ -80,11 +80,13 @@ def edit(request, recipe_id=None):
     if ok:
         form.save()
         for ingredient in ingredients:
-            ingredient.instance.recipe = form.instance
-            ingredient.save()
+            if ingredient.is_valid() and ingredient.has_changed(): # Evite d'enregistrer les formulaires vides
+                ingredient.instance.recipe = form.instance
+                ingredient.save()
         reload = False
         for ingredient in ingredients.deleted_forms:
-            ingredient.instance.delete()
+            if ingredient.instance.id: # Evite de tenter de supprimer un ingrédient inexistant
+                ingredient.instance.delete()
             reload = True
         if reload:
             ingredients = IngredientFormSet(queryset=Ingredient.objects.filter(recipe=recipe))
