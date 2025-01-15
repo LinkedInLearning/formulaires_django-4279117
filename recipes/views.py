@@ -68,7 +68,9 @@ def edit(request, recipe_id=None):
     )
     IngredientFormSet = modelformset_factory(
         Ingredient, 
-        form=IngredientForm
+        form=IngredientForm,
+        can_delete=True,
+        extra= 3 if recipe_id else 10
     )
     ingredients = IngredientFormSet(
         request.POST or None, 
@@ -80,6 +82,12 @@ def edit(request, recipe_id=None):
         for ingredient in ingredients:
             ingredient.instance.recipe = form.instance
             ingredient.save()
+        reload = False
+        for ingredient in ingredients.deleted_forms:
+            ingredient.instance.delete()
+            reload = True
+        if reload:
+            ingredients = IngredientFormSet(queryset=Ingredient.objects.filter(recipe=recipe))
     context = get_context(request, { 
         'ok': ok, 
         'form': form, 
