@@ -76,8 +76,11 @@ def edit(request, recipe_id=None):
         request.POST or None, 
         queryset=Ingredient.objects.filter(recipe=recipe)
     )
-    ok = request.method == 'POST' and form.is_valid() and ingredients.is_valid()
-    
+    if request.method == 'POST':
+        ok = form.is_valid() and ingredients.is_valid()
+        ko = not ok
+    else:
+        ok = ko = False
     if ok:
         form.save()
         for ingredient in ingredients:
@@ -93,6 +96,7 @@ def edit(request, recipe_id=None):
             ingredients = IngredientFormSet(queryset=Ingredient.objects.filter(recipe=recipe))
     context = get_context(request, { 
         'ok': ok, 
+        'ko': ko,
         'form': form, 
         'recipe': recipe,
         'ingredients': ingredients,

@@ -11,7 +11,20 @@
 
 {% block content %}
 
-{% if ok %}<div class="alert alert-success">Recette enregistrée !</div>{% endif %}
+{% if ok %}
+  <div class="alert alert-success">Recette enregistrée !</div>
+{% elif ko %}
+  <div class="alert alert-danger">
+    <p>Erreur(s) de validation : </p>
+    <ul>
+    {% for field, errlist in form.errors.items %}
+      {% for err in errlist %}
+        <li>{{ err }}</li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}
 <form class="col-12 py-3" enctype="multipart/form-data" method="post">
   {% csrf_token %}
   <div class="row">
@@ -22,7 +35,9 @@
       {% endfor %}
     </div>
     <div class="col-8">
-      {{ form }}
+      <table>
+      {{ form.as_table }}
+      </table>
     </div>
   </div>
   <input type="submit" class="btn btn-primary" value="Enregistrer">
