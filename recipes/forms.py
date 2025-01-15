@@ -35,7 +35,7 @@ class RecipeForm(forms.ModelForm):
     )
     category = forms.ModelChoiceField(
         queryset=Category.objects.order_by('order'),
-        widget=forms.RadioSelect()
+        widget=forms.Select()
     )
 
     def clean_confirmation(self):
