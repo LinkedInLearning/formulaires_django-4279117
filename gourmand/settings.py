@@ -134,3 +134,5 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 TINYMCE_JS_URL = 'tinymce/tinymce.min.js'
+
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
