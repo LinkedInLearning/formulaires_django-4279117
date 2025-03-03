@@ -6,7 +6,7 @@ Ce dossier Repository est lié au cours `Créer des formulaires en Django`. Le c
 
 Ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
 
-DESCRIPTION DE LA FORMATION
+Apprenez à créer des formulaires puissants et performants avec Django, l'un des frameworks les plus populaires pour Python. Ce cours vous guide étape par étape à travers la création, l’intégration et la gestion des formulaires dans vos projets web. Découvrez comment concevoir des formulaires HTML, les transformer en formulaires Django, et les connecter à des modèles de données. Explorez les fonctionnalités avancées telles que l’utilisation de widgets, l’intégration de fichiers, les FormSets et la personnalisation du rendu. À l’issue de cette formation, vous serez capable de créer des formulaires robustes et adaptés à vos besoins tout en assurant la sécurité et l’efficacité de votre code.
 
 ## Instructions
 
@@ -37,8 +37,8 @@ La branche master correspond au code à la fin de la formation.
  Retrouvez mes autres formations sur [LinkedIn Learning][lil-URL-trainer].
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
-[lil-thumbnail-url]: https:
+[lil-course-url]: https://www.linkedin.com/learning/creer-des-formulaires-en-django
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG3zWRdNIYLww/learning-public-crop_675_1200/B4EZVNRyMZHMAY-/0/1740758263541?e=2147483647&v=beta&t=1lqtRQsUfiXAtvPrvxgGcQezTfzLcGkMoBgfkEGjyrQ
 [lil-URL-trainer]: https://www.linkedin.com/learning/instructors/sylvain-labasse
 
 [1]: # (End of FR-Instruction ###############################################################################################)
